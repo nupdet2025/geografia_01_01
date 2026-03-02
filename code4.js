@@ -22,7 +22,7 @@ gdjs.FinalCode.GDAcertoObjects1= [];
 gdjs.FinalCode.GDAcertoObjects2= [];
 
 
-gdjs.FinalCode.asyncCallback18902084 = function (runtimeScene, asyncObjectsList) {
+gdjs.FinalCode.asyncCallback21398196 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.FinalCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Introdução", false);
 }gdjs.FinalCode.localVariables.length = 0;
@@ -36,7 +36,7 @@ gdjs.FinalCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.FinalCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.FinalCode.asyncCallback18902084(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.FinalCode.asyncCallback21398196(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -101,7 +101,8 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\victory.mp3", 2, true, 60, 1);
+{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\victory.mp3", 2, true, 20, 1);
+}{gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "assets\\audio_final.mp3", 4, false, 100, 1);
 }}
 
 }
@@ -123,6 +124,7 @@ for (var i = 0, k = 0, l = gdjs.FinalCode.GDbtn_9595jogarObjects1.length;i<l;++i
 gdjs.FinalCode.GDbtn_9595jogarObjects1.length = k;
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "assets\\btn_press.mp3", false, 100, 1);
+}{gdjs.evtTools.sound.fadeSoundVolume(runtimeScene, 4, 0, 0.5);
 }
 { //Subevents
 gdjs.FinalCode.eventsList0(runtimeScene);} //End of subevents
